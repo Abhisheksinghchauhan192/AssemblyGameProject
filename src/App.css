@@ -1,0 +1,185 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+
+  --wrong-key:#EC5D49;
+  --right-key:#10A95B;
+  --lost-bg:#BA2A2A;
+  --miss-lang:#7A5EA7;
+  --text-color:#F9F4DA;
+}
+
+main{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  background-color: #282726;
+  min-width: 350px;
+  min-height: 724px;
+  max-width: 594px;
+  width: 100%;
+  
+}
+
+header{
+  width: 352px;
+}
+
+
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.intro h1{
+  font-size: 1.8rem;
+  margin: 2rem;
+  padding: 0;
+  color: var(--text-color);
+}
+.intro p{
+  color:var(--text-color);
+  opacity: 0.8;
+  margin:0 1rem;
+  margin-bottom: 2rem;
+}
+
+.game-status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  color:var(--text-color);
+}
+
+.game-status h2{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.game-status p{
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.game-status.won{
+  background-color: var(--right-key);
+}
+.game-status.lost{
+  background-color: var(--lost-bg);
+}
+.game-status.farewell{
+  background-color: var(--miss-lang);
+  border: 1px dashed #323232;
+  height: 4rem;
+}
+.farewell p{
+  font-size: 1.1rem;
+}
+
+.chips-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:0.2rem;
+  max-width: 266px;
+  margin-bottom: 2rem;
+}
+
+.chips{
+  padding: 2px 4px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.chips.lost::before{
+
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.letters-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.letters{
+  margin-right: 0.2rem;
+  background-color: #323232;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 1px solid var(--text-color);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.missed-letter{
+  color:var(--wrong-key);
+}
+
+.keyboard{
+  padding: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap:0.4rem;
+  min-width: 350px;
+  margin-bottom: 2rem;
+}
+
+.keyboardKey{
+  background-color:#FCBA29;
+  color:#1E1E1E;
+
+}
+
+.keyboardKey.correct{
+  background-color: var(--right-key);
+}
+
+.keyboardKey.wrong{
+  background-color: var(--wrong-key);
+}
+
+/* disable keyboard  */
+.keyboardKey:disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.new-game{
+  background-color: #11B5E5;
+  color: #1E1E1E;
+  width: 288px;
+  height: 40px;
+  border: 1px solid var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.new-game:hover{
+  background-color: #0894be;
+  transform: translateY(-2px);
+}
