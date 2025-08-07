@@ -2,6 +2,8 @@
 
 A fun and educational word-guessing game built with **React**, themed around **Assembly Languages**. Test your guessing skills and learn a bit about programming languages as you play!
 
+### [Live](https://abhisheksinghchauhan192.github.io/AssemblyGameProjectLive/)
+
 ---
 
 ## 🎮 Game Concept
